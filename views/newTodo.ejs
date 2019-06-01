@@ -1,0 +1,43 @@
+<%include ./partials/header.ejs%>
+
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-colorselector.css" />
+<h1 class="text-uppercase text-center" style="padding:10px;">List a new Camp!</h1>
+<form action="/lists" method="POST">
+    <div class="form-group">
+        <label for="title">List Category Name : </label>
+        <input class="form-control" type="text" id="title" name="list[title]"  placeholder="Name of your category">
+    </div>
+    <div class="form-group">
+        <label for="color">List Color : </label>
+        <select id="colorselector" name="list[color]" style="display:inline;">
+          <option value="#A0522D" data-color="#A0522D">sienna</option>
+          <option value="#CD5C5C" data-color="#CD5C5C" selected="selected">indianred</option>
+          <option value="#FF4500" data-color="#FF4500">orangered</option>
+          <option value="#008B8B" data-color="#008B8B">darkcyan</option>
+          <option value="#B8860B" data-color="#B8860B">darkgoldenrod</option>
+          <option value="#32CD32" data-color="#32CD32">limegreen</option>
+          <option value="#FFD700" data-color="#FFD700">gold</option>
+          <option value="#48D1CC" data-color="#48D1CC">mediumturquoise</option>
+          <option value="#87CEEB" data-color="#87CEEB">skyblue</option>
+          <option value="#FF69B4" data-color="#FF69B4">hotpink</option>
+          <option value="#CD5C5C" data-color="#CD5C5C">indianred</option>
+          <option value="#87CEFA" data-color="#87CEFA">lightskyblue</option>
+          <option value="#6495ED" data-color="#6495ED">cornflowerblue</option>
+          <option value="#DC143C" data-color="#DC143C">crimson</option>
+          <option value="#FF8C00" data-color="#FF8C00">darkorange</option>
+          <option value="#C71585" data-color="#C71585">mediumvioletred</option>
+          <option value="#000000" data-color="#000000">black</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="body">List Description : </label>
+        <textarea class="form-control" id="body" name="list[description]" rows="6" placeholder="Some words about your campsite!"></textarea>
+    </div>
+    <button type="submit" class="btn btn-block btn-basic" value="Submit" style="margin-bottom:5px;">List it!</button>
+</form>
+
+<script>
+    $('#colorselector').colorselector();
+</script>
+<%include ./partials/footer.ejs%>

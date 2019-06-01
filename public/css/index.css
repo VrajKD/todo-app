@@ -1,0 +1,20 @@
+.tododiv {
+  color: gray;
+  border-bottom: 0.5px solid #e0e0e0;
+  border-right: 0.5px solid #e0e0e0;
+}
+
+.tododiv:nth-of-type(3) {
+  border-right: none;
+}
+
+.card1 {
+  padding: 10px;
+  margin: 14px 5px;
+  border-radius: 10px;
+}
+
+.openbtn {
+  margin: 20px 5px;
+  background: rgba(255, 255, 255, 0.6);
+}

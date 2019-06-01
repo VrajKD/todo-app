@@ -1,0 +1,24 @@
+<%include ./partials/header.ejs%>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<div class="jumbotron">
+    <h2>ToDo Manager</h2>
+    <p>Manage your time with your tasks!</p>
+    <a href="/lists/new" class="btn btn-md btn-light"> Create new List ! </a>
+    <hr>
+    <small>Keep track of all your tasks category-wise.</small>
+</div>
+
+<div class='row'>
+        <% lists.forEach(list => { %>
+        <div class='col-md-4 col-sm-12 text-center tododiv '>
+        <div class ="card1" style="background-color:<%=list.color%>;">
+            <div class='caption'><h4><%=list.title%></h4></div>
+            <hr>
+            <div class="list">
+                <a href="/lists/<%=list._id%>" class="btn btn-md btn-light openbtn">Open List</a>
+            </div>
+        </div>
+        </div>
+        <%});%>
+</div>
+<%include ./partials/footer.ejs%>

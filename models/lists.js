@@ -1,29 +1,19 @@
 var mongoose = require("mongoose");
 
 var listSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true
-    },
+    title: String,
     created: {
         type: Date,
         default: Date.now
     },
     description: String,
     todos: [{
-        description: {
-            type: String,
-            required: true
-        },
+        description: String,
         date: Date
     }],
-    color: "String",
-    author: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },
-        username: "String"
+    color: {
+        type: String,
+        default: "#1abc9c"
     },
     edited: {
         type: Date,
@@ -31,4 +21,4 @@ var listSchema = new mongoose.Schema({
     }
 })
 
-module.exports - mongoose.model("List", listSchema);
+module.exports = mongoose.model("List", listSchema);
