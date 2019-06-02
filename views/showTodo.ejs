@@ -1,0 +1,24 @@
+<%include ./partials/header.ejs%>
+<script src="/js/show.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/show.css" />
+<div class="coverdiv">
+<h1>My To-Do List<p id="add">-</p>
+</h1>
+<ul class="list"> 
+    <input type="text" placeholder="Add your to-do here" id="addTodo"></input>
+    <li class="todos"><button class="icons btn"><i class="fas fa-trash-alt"></i></button><span class="todotext">First Note</span></li>
+    <li class="todos"><button class="icons btn"><i class="fas fa-trash-alt"></i></button><span class="todotext">Second Note</span></li>
+    <li class="todos"><button class="icons btn"><i class="fas fa-trash-alt"></i></button><span class="todotext">Third Note</span></li>
+</ul>
+<br>
+<div id="rules">
+    <p>Click anywhere to mark the task as DONE.</p>
+    <p>Click on the bin to DELETE the task.</p>
+    <p>Click on the pad to EDIT and add the task again.</p>
+    <br>
+    <hr><br>
+    <p> ------------------------ Enjoy! ------------------------</p>
+</div>
+</div>
+
+<%include ./partials/footer.ejs%>

@@ -44,3 +44,7 @@
          res.redirect("/lists")
      })
  })
+
+ app.get('/lists/:id', function (req, res) {
+     res.render("showTodo.ejs")
+ })

@@ -1,7 +1,8 @@
 <%include ./partials/header.ejs%>
+<script src="/js/bootstrap-colorselector.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/css/index.css" />
-<link rel="stylesheet" type="text/css" href="css/bootstrap-colorselector.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-colorselector.css" />
 <h1 class="text-uppercase text-center" style="padding:10px;">List a new Camp!</h1>
 <form action="/lists" method="POST">
     <div class="form-group">
@@ -10,7 +11,7 @@
     </div>
     <div class="form-group">
         <label for="color">List Color : </label>
-        <select id="colorselector" name="list[color]" style="display:inline;">
+        <select id="colorselector" name="list[color]" style="display:inline-block;">
           <option value="#A0522D" data-color="#A0522D">sienna</option>
           <option value="#CD5C5C" data-color="#CD5C5C" selected="selected">indianred</option>
           <option value="#FF4500" data-color="#FF4500">orangered</option>
@@ -38,6 +39,8 @@
 </form>
 
 <script>
+$(function(){
     $('#colorselector').colorselector();
+});
 </script>
 <%include ./partials/footer.ejs%>
